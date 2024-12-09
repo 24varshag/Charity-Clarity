@@ -21,7 +21,7 @@ body {
 }
 body {
   position: relative; /* Ensure the pseudo-element is positioned relative to the body */
-  background-image: url("public/img8.png");
+  background-image: url("../public/img8.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; /* Ensure the image covers the entire screen */
