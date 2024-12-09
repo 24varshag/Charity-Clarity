@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto";
+}
+body {
+  background-image: url("public/img8.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; /* Ensure the image covers the entire screen */
+  height: 700px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body {
+  position: relative; /* Ensure the pseudo-element is positioned relative to the body */
+  background-image: url("public/img8.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; /* Ensure the image covers the entire screen */
+  height: 100vh; /* Use viewport height to make sure it covers the visible screen */
+  min-height: 100%; /* Ensure the body is at least the height of the viewport */
+  overflow-x: hidden;
+}
+
+/* Create a pseudo-element for the blurred background */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-repeat: inherit;
+  background-attachment: inherit;
+  background-size: inherit;
+  z-index: -1; /* Ensure it's behind the content inside the body */
+  pointer-events: none; /* Prevent it from interfering with user interactions */
+
+  filter: blur(3px);
+}
